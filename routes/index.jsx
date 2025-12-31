@@ -11,7 +11,7 @@ export default function Home() {
 		</head>
 		<body>
 		<div >
-		    <Check /><
+		    404
 		</div>
 		</body>
     </html>
