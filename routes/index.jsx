@@ -11,7 +11,7 @@ export default function Home() {
 		</head>
 		<body>
 		<div >
-		    
+		    <Check />
 		</div>
 		</body>
     </html>
