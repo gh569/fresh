@@ -1,5 +1,8 @@
 
 
 export default ()=>{
-	return 'about'
+	return <div>
+		<h1>About</h1>
+		<button onClick={()=>history.back()}>back</button>
+	</div>
 }

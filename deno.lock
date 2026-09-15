@@ -1287,6 +1287,25 @@
       "integrity": "sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g=="
     }
   },
+  "redirects": {
+    "https://esm.sh/preact@^10.0.0/hooks?target=denonext": "https://esm.sh/preact@10.29.8/hooks?target=denonext",
+    "https://esm.sh/preact@^10.0.0?target=denonext": "https://esm.sh/preact@10.29.8?target=denonext",
+    "https://esm.sh/regexparam@^3.0.0?target=denonext": "https://esm.sh/regexparam@3.0.0?target=denonext"
+  },
+  "remote": {
+    "https://esm.sh/preact@10.29.8/denonext/hooks.mjs": "bd4b792a779ef16d8d7b1e664565ed20f9965e40cefba6fab02e9cccc34739fc",
+    "https://esm.sh/preact@10.29.8/denonext/preact.mjs": "153d3689316719b3cd74447fc0061d82f5720d862ca42e3ed2c78fa9f34af804",
+    "https://esm.sh/preact@10.29.8/hooks?target=denonext": "3ece27496792c43f995520af1ecf70bca94e66281775531c61ca577481ae88c8",
+    "https://esm.sh/preact@10.29.8?target=denonext": "387d9ce7914b82534921e7760c2635eea27a856a2171d4f572407f3275dd569b",
+    "https://esm.sh/regexparam@3.0.0/denonext/regexparam.mjs": "e745e72f813298c1e715585121bd7d646dbc3ed52ce6d6f4d534ef3785d9a8e2",
+    "https://esm.sh/regexparam@3.0.0?target=denonext": "7872307e3b552c622d2da8f5fbdb86987254c65b029eec3b17cfffa6eaf92661",
+    "https://esm.sh/wouter-preact@3.9.0": "9487f38ae224185017543f9ad3b263616c0c3b6ee9d9c02ec5ba56316f1ed9e8",
+    "https://esm.sh/wouter-preact@3.9.0/denonext/src/react-deps.mjs": "07c052a6868e274128fb02ad34094d6c19b49310d7da5f740f670b834345477e",
+    "https://esm.sh/wouter-preact@3.9.0/denonext/use-browser-location.mjs": "94f438105f57b44ad74adc58fe709b527712f4e4250b9c05bb46e8eed0eacfc6",
+    "https://esm.sh/wouter-preact@3.9.0/denonext/use-hash-location.mjs": "fe8f5bc45981c15942bf594aa75b1d6032eadad6f11b3ddc4d82cfe2fddadc45",
+    "https://esm.sh/wouter-preact@3.9.0/denonext/wouter-preact.mjs": "08ba96583141b6c91791de3178e6ecbe305e5f112b57cf7afac72cb68d9956a0",
+    "https://esm.sh/wouter-preact@3.9.0/use-hash-location": "18f293a1af16ef2058ec54accfcb7b60a59f11c0bf3718b930a12471f4653fd7"
+  },
   "workspace": {
     "dependencies": [
       "jsr:@fresh/core@^2.3.3",
