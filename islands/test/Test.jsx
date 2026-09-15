@@ -6,6 +6,7 @@ export default () => {
 	return (
 		<div className={style.test} onClick={onClick}>
 			{count.value} 
+			
 		</div>
 	);
 };
