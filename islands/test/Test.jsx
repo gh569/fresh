@@ -5,7 +5,7 @@ export default () => {
 	const onClick = () => count.value++;
 	return (
 		<div className={style.test} onClick={onClick}>
-			{count.value}
+			{count.value} 
 		</div>
 	);
 };
