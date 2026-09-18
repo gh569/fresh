@@ -1,11 +1,8 @@
-import { useSignal } from "@preact/signals";
 import { Head } from "fresh/runtime";
 import { define } from "../utils.ts";
-import Counter from "../islands/Counter.tsx";
-import Test from "../islands/test/Test.jsx";
+
 
 export default define.page(function Home(ctx) {
-  const count = useSignal(3);
 
   console.log("Shared value " + ctx.state.shared);
 
@@ -27,9 +24,14 @@ export default define.page(function Home(ctx) {
           Try updating this message in the
           <code class="mx-2">./routes/index.tsx</code> file, and refresh.
         </p>
-        <Counter count={count} />
-				<Test/>
+        
       </div>
+			<div>
+			<a href='/about'>about</a>
+			</div>
+			<div>
+			<a href='/test'>test</a>
+			</div>
     </div>
   );
 });
