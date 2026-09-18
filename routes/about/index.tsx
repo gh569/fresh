@@ -1,32 +1,37 @@
 import "./index.css";
 import { define } from "../../utils.ts";
 
-// define.handlers 写法：直接返回 { data: xxx }，不要调用 ctx.render()
 export const handler = define.handlers({
+  // GET 加上 async
   async GET(ctx) {
-    // 写入state，中间件/页面都可以读取
+    // 1. fetch 请求远程接口
+    // const res = await fetch("https://jsonplaceholder.typicode.com/posts/1");
+    const res = await fetch("https://env-00jxhocqgh3m-static.normal.cloudstatic.cn/a.json");
+    const apiData = await res.json();
+		// const value=JSON.parse(apiData)
+
+    // 2. 写入state（可选，用于中间件共享）
     ctx.state.title = "关于页面";
-		const v=await fetch('https://fresh-app.gh569.deno.net/api/zhangs')
-		
-    // ✅ define.handlers 约定：返回 { data } 对象，交给页面组件的 props.data
+
+    // 3. 返回 { data }，data 会自动传给页面组件 props.data
     return {
       data: {
-        pageMsg: "来自handler的数据",
-				v:JSON.stringify(v)
+        api: apiData
       }
     };
   },
 });
 
-// 页面同时能拿到 state 和 data
+// 页面组件接收 data 和 state
 export default define.page<typeof handler>(function About({ state, data }) {
-  console.log("Shared value " + state.shared);
   return (
     <div>
-      about
-      <p>state.title: {state.title}</p>
-      <p>data.pageMsg: {data.pageMsg}</p>
-      <p>data.v: {data.v}</p>
+      <h1>about</h1>
+      <p>state.title：{state.title}</p>
+      <h3>远程接口数据</h3>
+      <p>姓名：{data.api.name}</p>
+      <p>年龄：{data.api.age}</p>
+			<p>{JSON.stringify(data.api)}</p>
     </div>
   );
 });
