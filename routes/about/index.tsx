@@ -1,5 +1,6 @@
 import "./index.css";
 import { define } from "../../utils.ts";
+import Test from '../../islands/test/Test.jsx'
 
 export const handler = define.handlers({
   // GET 加上 async
@@ -31,6 +32,7 @@ export default define.page<typeof handler>(function About({ state, data }) {
       <h3>远程接口数据</h3>
       <p>姓名：{data.api.name}</p>
       <p>年龄：{data.api.age}</p>
+			<Test value={data.api} />
 			<p>{JSON.stringify(data.api)}</p>
     </div>
   );

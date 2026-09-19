@@ -4,6 +4,7 @@ import { useSignal } from '@preact/signals';
 
 export default () => {
 	const count = useSignal(3);
+	
 	return (
 		<div>
 			<Counter count={count} />
